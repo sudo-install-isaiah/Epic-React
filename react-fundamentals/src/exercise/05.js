@@ -39,10 +39,24 @@ const largeBox = (
   </div>
 )
 
+const Box = props => {
+  console.log(props)
+  return (
+    <div
+      className={`box ${props.className}`}
+      style={{fontStyle: 'italic', ...props.style}}
+    >
+      {props.children}
+    </div>
+  )
+}
+
 function App() {
   return (
     <div>
-      {smallBox}
+      <Box className="box--small" style={{backgroundColor: 'lightblue'}}>
+        small lightblue box
+      </Box>
       {mediumBox}
       {largeBox}
     </div>
