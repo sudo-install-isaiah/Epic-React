@@ -39,9 +39,13 @@ const largeBox = (
   </div>
 )
 
-const Box = ({style, className = '', ...otherProps}) => {
+const Box = ({style, size, ...otherProps}) => {
+  const sizeClassName = size ? `box--${size}` : ''
   return (
-    <div className={`box ${className}`} style={{fontStyle: 'italic', ...style}}>
+    <div
+      className={`box ${sizeClassName}`}
+      style={{fontStyle: 'italic', ...style}}
+    >
       {...otherProps}
     </div>
   )
