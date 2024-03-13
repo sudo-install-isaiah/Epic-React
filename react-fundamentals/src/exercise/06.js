@@ -15,7 +15,7 @@ function UsernameForm({onSubmitUsername}) {
   const handleSubmit = event => {
     event.preventDefault()
     usernameRef.current = event.target.elements[0].value
-    onSubmitUsername(usernameRef.current.value)
+    onSubmitUsername(usernameRef.current)
   }
   // 🐨 get the value from the username input (using whichever method
   // you prefer from the options mentioned in the instructions)
